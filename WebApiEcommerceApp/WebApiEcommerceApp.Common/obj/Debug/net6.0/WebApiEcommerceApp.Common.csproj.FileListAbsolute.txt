@@ -1,0 +1,12 @@
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\bin\Debug\net6.0\WebApiEcommerceApp.Common.deps.json
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\bin\Debug\net6.0\WebApiEcommerceApp.Common.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\bin\Debug\net6.0\WebApiEcommerceApp.Common.pdb
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.csproj.AssemblyReference.cache
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.AssemblyInfoInputs.cache
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.AssemblyInfo.cs
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\refint\WebApiEcommerceApp.Common.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\WebApiEcommerceApp.Common.pdb
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Common\obj\Debug\net6.0\ref\WebApiEcommerceApp.Common.dll

@@ -1,0 +1,14 @@
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\bin\Debug\net6.0\WebApiEcommerceApp.Model.deps.json
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\bin\Debug\net6.0\WebApiEcommerceApp.Model.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\bin\Debug\net6.0\WebApiEcommerceApp.Model.pdb
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.csproj.AssemblyReference.cache
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.AssemblyInfoInputs.cache
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.AssemblyInfo.cs
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\refint\WebApiEcommerceApp.Model.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.pdb
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\ref\WebApiEcommerceApp.Model.dll
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\bin\Debug\net6.0\WebApiEcommerceApp.Model.runtimeconfig.json
+C:\Users\Nguyen Hoang Dieu\source\repos\WebApiEcommerceApp\WebApiEcommerceApp\WebApiEcommerceApp.Model\obj\Debug\net6.0\WebApiEcommerceApp.Model.genruntimeconfig.cache

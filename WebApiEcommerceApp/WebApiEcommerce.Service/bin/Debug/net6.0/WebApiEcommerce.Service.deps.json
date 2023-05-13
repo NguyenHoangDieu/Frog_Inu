@@ -1,0 +1,61 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WebApiEcommerce.Service/1.0.0": {
+        "dependencies": {
+          "WebApiEcommerceApp.Common": "1.0.0",
+          "WebApiEcommerceApp.Data": "1.0.0",
+          "WebApiEcommerceApp.Model": "1.0.0"
+        },
+        "runtime": {
+          "WebApiEcommerce.Service.dll": {}
+        }
+      },
+      "WebApiEcommerceApp.Common/1.0.0": {
+        "runtime": {
+          "WebApiEcommerceApp.Common.dll": {}
+        }
+      },
+      "WebApiEcommerceApp.Data/1.0.0": {
+        "dependencies": {
+          "WebApiEcommerceApp.Common": "1.0.0"
+        },
+        "runtime": {
+          "WebApiEcommerceApp.Data.dll": {}
+        }
+      },
+      "WebApiEcommerceApp.Model/1.0.0": {
+        "runtime": {
+          "WebApiEcommerceApp.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebApiEcommerce.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApiEcommerceApp.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApiEcommerceApp.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApiEcommerceApp.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
