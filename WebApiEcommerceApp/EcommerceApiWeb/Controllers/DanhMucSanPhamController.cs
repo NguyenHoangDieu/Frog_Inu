@@ -1,5 +1,7 @@
 ﻿using EcommerceApiWeb.Data.Entity;
 using EcommerceApiWeb.Models;
+using EcommerceApiWeb.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApiEcommerceApp.Data;
@@ -11,60 +13,48 @@ namespace EcommerceApiWeb.Controllers
     public class DanhMucSanPhamController : ControllerBase
     {
         private readonly EcommerceAppDbContext _context;
-        public DanhMucSanPhamController(EcommerceAppDbContext context)
+        private IDanhMucSanPhamRepository _danhMucSanPhamRepository;
+        public DanhMucSanPhamController(EcommerceAppDbContext context, IDanhMucSanPhamRepository danhMucSanPhamRepository)
         {
             _context = context;
+            _danhMucSanPhamRepository = danhMucSanPhamRepository;
         }
-        [HttpGet]
-        public IActionResult GetAllSanPham()
-        {
-            var listDanhMuc = _context.DanhMucSanPhams.ToList();
-            return Ok(listDanhMuc);
-        }
-        [HttpGet("{id}")]
-        public IActionResult GetDanhMucById(int id)
-        {
-            var danhMuc = _context.DanhMucSanPhams.SingleOrDefault(sp => sp.Id == id);
-            if (danhMuc == null)
-            {
-                return NotFound();
-            }
-            return Ok(danhMuc);
-        }
-        [HttpPost]
-        public IActionResult CreateDanhMuc(DanhMucSanPhamModel model)
+        [HttpGet("GetAllCategory")]
+        public IActionResult GetAllDanhMuc()
         {
             try
             {
-                var danhMuc = new DanhMucSanPham
-                {
-                    TenDanhMuc = model.TenDanhMuc,
-                    MoTa = model.MoTa,
-                    TrangThai = model.TrangThai,
-                };
-                _context.Add(danhMuc);
-                _context.SaveChanges();
-                return Ok(danhMuc);
-
+                return Ok(_danhMucSanPhamRepository.GetAllCategory());
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
         }
-        [HttpPut("{id}")]
-        public IActionResult EditDanhMuc(int id, DanhMucSanPhamModel model)
+
+        [HttpGet("GetCategoryById")]
+        public IActionResult GetCategoryById(int id)
         {
-            var danhMuc = _context.DanhMucSanPhams.SingleOrDefault(sp => sp.Id == id);
-            if (danhMuc == null)
+            try
             {
-                return BadRequest();
+                return Ok(_danhMucSanPhamRepository.GetCategoryById(id));
             }
-            danhMuc.TenDanhMuc = model.TenDanhMuc;
-            danhMuc.MoTa = model.MoTa;
-            danhMuc.TrangThai = model.TrangThai;
-            _context.SaveChanges();
-            return NoContent();
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet("GetProductsByCategory")]
+        public IActionResult GetProductsByCategory(int idDanhMuc)
+        {
+            try
+            {
+                return Ok(_danhMucSanPhamRepository.GetProductsByCategory(idDanhMuc));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EcommerceApiWeb.Migrations
 {
-    [DbContext(typeof(EcommerceAppDbContext))]
+    [DbContext(typeof(Data.Entity.EcommerceAppDbContext))]
     partial class EcommerceAppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -34,17 +34,13 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdThanhToan")
                         .HasColumnType("int");
@@ -53,9 +49,7 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Total")
                         .HasColumnType("float");
@@ -85,17 +79,13 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdChiTietDH")
                         .HasColumnType("int");
@@ -104,20 +94,15 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NhaCungCap")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
                     b.Property<string>("TrangThai")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -139,34 +124,25 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MoTa")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenDanhMuc")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
@@ -188,17 +164,13 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdChiTietDH")
                         .HasColumnType("int");
@@ -210,9 +182,7 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
@@ -235,19 +205,15 @@ namespace EcommerceApiWeb.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("DiaChi")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DienThoai")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GhiChu")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ThanhPho")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
@@ -272,35 +238,27 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MoTa")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("PhanTramGiamGia")
                         .HasColumnType("float");
 
                     b.Property<string>("TenMaGiamGia")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isActive")
@@ -323,25 +281,19 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
@@ -366,25 +318,19 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Total")
                         .HasColumnType("float");
@@ -412,58 +358,46 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("GiaSanPham")
                         .HasColumnType("float");
 
-                    b.Property<long>("IdDanhMuc")
-                        .HasColumnType("bigint");
+                    b.Property<int>("IdDanhMuc")
+                        .HasColumnType("int");
 
-                    b.Property<long?>("IdGiamGia")
-                        .HasColumnType("bigint");
+                    b.Property<int?>("IdGiamGia")
+                        .HasColumnType("int");
 
-                    b.Property<long>("IdKhoHang")
-                        .HasColumnType("bigint");
+                    b.Property<int>("IdKhoHang")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MoTa")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MoreImages")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SKU")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenSanPham")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
@@ -485,45 +419,35 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Created_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Delete_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Delete_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DienThoai")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HoVaTen")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("WebApiEcommerceApp.Data.UserThanhToan", b =>
@@ -538,9 +462,7 @@ namespace EcommerceApiWeb.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhuongThucThanhToan")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

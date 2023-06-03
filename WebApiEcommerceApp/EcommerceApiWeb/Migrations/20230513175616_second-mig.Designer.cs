@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EcommerceApiWeb.Migrations
 {
-    [DbContext(typeof(EcommerceAppDbContext))]
+    [DbContext(typeof(Data.Entity.EcommerceAppDbContext))]
     [Migration("20230513175616_second-mig")]
     partial class secondmig
     {
