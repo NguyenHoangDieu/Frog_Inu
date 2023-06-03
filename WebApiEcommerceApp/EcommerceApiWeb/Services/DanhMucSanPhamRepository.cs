@@ -12,28 +12,32 @@ namespace EcommerceApiWeb.Services
         {
             _context = context;
         }
-        public List<DanhMucSanPhamModel> GetAllCategory()
+        public List<DanhMucSanPham> GetAllCategory()
         {
-            var categories = _context.DanhMucSanPhams.Select(x => new DanhMucSanPhamModel
+            var categories = _context.DanhMucSanPhams.Select(x => new DanhMucSanPham
             {
+                Id = x.Id,
                 TenDanhMuc = x.TenDanhMuc,
                 MoTa = x.MoTa,
                 TrangThai = x.TrangThai,
+                Created_at = x.Created_at,
 
             });
             return categories.ToList();
         }
 
-        public DanhMucSanPhamModel GetCategoryById(int id)
+        public DanhMucSanPham GetCategoryById(int id)
         {
             var category = _context.DanhMucSanPhams.FirstOrDefault(x => x.Id == id);
             if (category != null)
             {
-                return new DanhMucSanPhamModel
+                return new DanhMucSanPham
                 {
+                    Id = category.Id,
                     TenDanhMuc = category.TenDanhMuc,
                     MoTa = category.MoTa,
                     TrangThai = category.TrangThai,
+                    Created_at = category.Created_at,
                 
                 };
 

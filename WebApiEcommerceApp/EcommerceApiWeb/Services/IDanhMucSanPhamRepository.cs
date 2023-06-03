@@ -5,8 +5,8 @@ namespace EcommerceApiWeb.Services
 {
     public interface IDanhMucSanPhamRepository
     {
-        List<DanhMucSanPhamModel> GetAllCategory();
-        DanhMucSanPhamModel GetCategoryById(int id);
+        List<DanhMucSanPham> GetAllCategory();
+        DanhMucSanPham GetCategoryById(int id);
         List<SanPham> GetProductsByCategory(int categoryId);
     }
 }
