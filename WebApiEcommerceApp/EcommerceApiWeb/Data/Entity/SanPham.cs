@@ -21,6 +21,5 @@ namespace WebApiEcommerceApp.Data
         public int IdKhoHang { get; set; }
         public int? IdGiamGia { get; set; }
 
-
     }
 }

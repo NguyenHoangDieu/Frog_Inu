@@ -4,6 +4,7 @@ using EcommerceApiWeb.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EcommerceApiWeb.Migrations
 {
     [DbContext(typeof(EcommerceAppDbContext))]
-    partial class EcommerceAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230617154624_update-tabel")]
+    partial class updatetabel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,11 +48,8 @@ namespace EcommerceApiWeb.Migrations
 
             modelBuilder.Entity("EcommerceApiWeb.Data.Entity.DonHang", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("Created_at")
                         .HasColumnType("datetime2");

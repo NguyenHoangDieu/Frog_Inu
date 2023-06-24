@@ -20,6 +20,7 @@ builder.Services.AddDbContext<EcommerceAppDbContext>(x => x.UseSqlServer(connect
 builder.Services.AddScoped<ISanPhamRepository , SanPhamRepository>();
 builder.Services.AddScoped<IDanhMucSanPhamRepository, DanhMucSanPhamRepository>();
 builder.Services.AddScoped<IUserRepository , UserRepository>();
+builder.Services.AddScoped<IDonHangRepository , DonHangRepository>();
 builder.Services.AddMemoryCache();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

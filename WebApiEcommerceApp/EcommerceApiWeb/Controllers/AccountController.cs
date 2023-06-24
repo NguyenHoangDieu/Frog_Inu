@@ -43,6 +43,7 @@ namespace EcommerceApiWeb.Controllers
                 else
                 {
                     _userData.UserMessage = "Login Success";
+                    _userData.Id = resultLoginCheck.Id;
 
                     var claims = new[] {
                         new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),

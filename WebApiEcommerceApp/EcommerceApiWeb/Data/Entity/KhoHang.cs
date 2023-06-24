@@ -9,7 +9,8 @@ namespace WebApiEcommerceApp.Data
     {
         [Key]
         public int Id { get; set; }
-        public int SoLuong { get; set; }
+        public string TenCoSo { get; set; }
+        public string DiaChi { get; set; }
         public bool TrangThai { get; set; }
     }
 }
