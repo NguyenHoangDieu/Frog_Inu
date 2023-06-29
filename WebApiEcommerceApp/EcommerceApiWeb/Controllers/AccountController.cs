@@ -1,4 +1,5 @@
-﻿using EcommerceApiWeb.Data.Entity;
+﻿using EcommerceApiWeb.Core;
+using EcommerceApiWeb.Data.Entity;
 using EcommerceApiWeb.Models;
 using EcommerceApiWeb.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -29,8 +30,9 @@ namespace EcommerceApiWeb.Controllers
         }
         [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login(UserModel _userData)
+        public async Task<APIResponseDto<UserModel>> Login(UserModel _userData)
         {
+            var result = new APIResponseDto<UserModel>();
             if (_userData != null)
             {
                 var resultLoginCheck = _context.Users
@@ -38,11 +40,14 @@ namespace EcommerceApiWeb.Controllers
                     .FirstOrDefault();
                 if (resultLoginCheck == null)
                 {
-                    return BadRequest("Invalid Credentials");
+                    result.Status = false;
+                    result.Message = "Tên tài khoản hoặc mật khẩu không chính xác";
+                    return result;
                 }
                 else
                 {
-                    _userData.UserMessage = "Login Success";
+                    result.Status = true;
+                    result.Message = "Đăng nhập thành công";
                     _userData.Id = resultLoginCheck.Id;
 
                     var claims = new[] {
@@ -67,13 +72,15 @@ namespace EcommerceApiWeb.Controllers
 
 
                     _userData.AccessToken = new JwtSecurityTokenHandler().WriteToken(token);
-
-                    return Ok(_userData);
+                    result.Data = _userData;
+                    return result;
                 }
             }
             else
             {
-                return BadRequest("No Data Posted");
+                result.Status = false;
+                result.Message = "Không có dữ liệu trả về";
+                return result;
             }
         }
 
