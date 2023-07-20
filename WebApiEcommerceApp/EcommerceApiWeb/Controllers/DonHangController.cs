@@ -2,6 +2,7 @@
 using EcommerceApiWeb.Data.Entity;
 using EcommerceApiWeb.Models;
 using EcommerceApiWeb.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.Entity;
@@ -19,7 +20,18 @@ namespace EcommerceApiWeb.Controllers
             _context = context;
             _donHangRepository = donHangRepository;
         }
-
+        [Authorize]
+        [HttpGet("DanhSachDonHang")]
+        public APIResponseDto<List<DonHang>> ListDonHang(int userId)
+        {
+            var result = new APIResponseDto<List<DonHang>>();
+            result.Status = true;
+            result.Message = string.Empty;
+            var donHang = _context.DonHangs.Where(x => x.IdUser == userId).ToList();
+            result.Data = donHang;
+            return result;
+        }
+        [Authorize]
         [HttpPost("MuaHang")]
         public APIResponseDto<string> DatHang(DonHangModel model)
         {
@@ -87,7 +99,7 @@ namespace EcommerceApiWeb.Controllers
 
             return result;
         }
-
+        [Authorize]
         [Route("DetailDonHang")]
         [HttpPost]
         public async Task<APIResponseDto<DonHangDto>> GetDetailDonHang(int id)

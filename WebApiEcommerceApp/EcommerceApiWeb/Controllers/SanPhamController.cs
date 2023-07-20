@@ -1,4 +1,5 @@
 ﻿
+using EcommerceApiWeb.Core;
 using EcommerceApiWeb.Data.Entity;
 using EcommerceApiWeb.Models;
 using EcommerceApiWeb.Services;
@@ -45,30 +46,55 @@ namespace EcommerceApiWeb.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        //[HttpPost]
-        //public IActionResult CreateSanPham(SanPhamModel model)
-        //{
-        //    try
-        //    {
-        //        var sanPham = new SanPham
-        //        {
-        //            TenSanPham = model.TenSanPham,
-        //            GiaSanPham = model.GiaSanPham,
-        //            MoTa = model.MoTa,
-        //            IdDanhMuc = model.IdDanhMuc,
-        //            IdKhoHang = model.IdKhoHang,
-        //            IdGiamGia = model.IdGiamGia,
-        //        };
-        //        _context.Add(sanPham);
-        //        _context.SaveChanges();
-        //        return Ok(sanPham);
+        [HttpGet("SearchSanPham")]
+        public APIResponseDto<List<SanPhamModel>> SearchSanPham(string tenSanPham) 
+        {
+            var data = _sanPhamRepository.SearchProduct(tenSanPham);
+            return data;
+        }
+        [HttpPost("AddSanPham")]
+        public async Task<IActionResult> AddSanPham([FromForm] SanPhamModel model, IFormFile ImageProduct)
+        {
+            var result = new APIResponseDto<SanPham>();
+            if (model != null)
+            {
+                var product = new SanPham
+                {
+                    Id = 0,
+                    TenSanPham = model.TenSanPham,
+                    MoTa = model.MoTa,
+                    GiaSanPham = model.GiaSanPham,
+                    IdDanhMuc = model.IdDanhMuc,
+                    IdGiamGia = model.IdGiamGia,
+                    IdKhoHang = model.IdKhoHang,
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
+                };
+                if (ImageProduct.Length > 0)
+                {
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", ImageProduct.FileName);
+                    using (var stream = System.IO.File.Create(path))
+                    {
+                        await ImageProduct.CopyToAsync(stream);
+                    }
+                    product.Image = "/images/" + ImageProduct.FileName;
+                }
+                else
+                {
+                    product.Image = "";
+                }
+                _context.Add(product);
+                _context.SaveChanges();
+                //result.Data = product;
+                //result.Status = true;
+                //result.Message = "Thêm sản phẩm thành công";
+                return Ok(product);
+            }
+
+            //result.Data = null;
+            //result.Status = false;
+            //result.Message = "Thêm sản phẩm thất bại";
+            return BadRequest("Lỗi");
+        }
         //[HttpPut("EditSanPham")]
         //public IActionResult EditSanPham(int id, SanPhamModel model)
         //{

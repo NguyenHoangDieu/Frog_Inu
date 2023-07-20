@@ -255,46 +255,6 @@ namespace EcommerceApiWeb.Migrations
                     b.ToTable("KhoHang");
                 });
 
-            modelBuilder.Entity("WebApiEcommerceApp.Data.PhienMuaSam", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime?>("Created_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Created_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Delete_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Delete_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Modified_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Modified_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<bool>("TrangThai")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PhienMuaSam");
-                });
-
             modelBuilder.Entity("WebApiEcommerceApp.Data.SanPham", b =>
                 {
                     b.Property<int>("Id")

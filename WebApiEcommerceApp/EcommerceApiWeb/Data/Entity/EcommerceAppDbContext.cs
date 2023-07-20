@@ -12,7 +12,6 @@ namespace EcommerceApiWeb.Data.Entity
         public virtual DbSet<DiaChiUser> DiaChiUsers { get; set; }
         public virtual DbSet<GiamGia> GiamGias { get; set; }
         public virtual DbSet<KhoHang> KhoHangs { get; set; }
-        public virtual DbSet<PhienMuaSam> PhienMuaSams { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<User> Users { get; set; }
 

@@ -1,11 +1,88 @@
 {
   "Version": 1,
-  "Hash": "q0/32qT10967ycw+2GacmHH4QeiWTC/io3a3eveoJCo=",
+  "Hash": "FjGwJIUwF0aHCsLBAWRCt+nAeNhe9AJPNPvVui9ND8Y=",
   "Source": "EcommerceApiWeb",
   "BasePath": "_content/EcommerceApiWeb",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "EcommerceApiWeb\\wwwroot",
+      "Source": "EcommerceApiWeb",
+      "ContentRoot": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\",
+      "BasePath": "_content/EcommerceApiWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\images\\caphe1.png",
+      "SourceId": "EcommerceApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\",
+      "BasePath": "_content/EcommerceApiWeb",
+      "RelativePath": "images/caphe1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\caphe1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\images\\caphe2.jpg",
+      "SourceId": "EcommerceApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\",
+      "BasePath": "_content/EcommerceApiWeb",
+      "RelativePath": "images/caphe2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\caphe2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\images\\caphe3.jpeg",
+      "SourceId": "EcommerceApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\",
+      "BasePath": "_content/EcommerceApiWeb",
+      "RelativePath": "images/caphe3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\caphe3.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\images\\caphe4.jpg",
+      "SourceId": "EcommerceApiWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nguyen Hoang Dieu\\source\\repos\\WebApiEcommerceApp\\WebApiEcommerceApp\\EcommerceApiWeb\\wwwroot\\",
+      "BasePath": "_content/EcommerceApiWeb",
+      "RelativePath": "images/caphe4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\caphe4.jpg"
+    }
+  ]
 }

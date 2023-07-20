@@ -4,6 +4,7 @@ namespace EcommerceApiWeb.Models
 {
     public class SanPhamModel
     {
+        public int Id { get; set; }
         [Required]
         [StringLength(250)]
         public string TenSanPham { get; set; }
@@ -15,5 +16,6 @@ namespace EcommerceApiWeb.Models
         public int IdDanhMuc { get; set; }
         public int IdKhoHang { get; set; }
         public int? IdGiamGia { get; set; }
+        public string Image { get;set; }
     }
 }

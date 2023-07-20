@@ -50,6 +50,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseAuthentication();
 app.UseSwagger();
+app.UseStaticFiles();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.UseDeveloperExceptionPage();

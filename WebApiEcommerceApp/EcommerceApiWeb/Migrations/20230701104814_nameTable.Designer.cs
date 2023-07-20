@@ -11,9 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EcommerceApiWeb.Migrations
 {
-    [DbContext(typeof(Data.Entity.EcommerceAppDbContext))]
-    [Migration("20230527142358_test")]
-    partial class test
+    [DbContext(typeof(EcommerceAppDbContext))]
+    [Migration("20230701104814_nameTable")]
+    partial class nameTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace EcommerceApiWeb.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("WebApiEcommerceApp.Data.ChiTietDatHang", b =>
+            modelBuilder.Entity("EcommerceApiWeb.Data.Entity.ChiTietDonHang", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,86 +32,101 @@ namespace EcommerceApiWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("Created_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Created_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Delete_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Delete_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdThanhToan")
+                    b.Property<int>("IdDonHang")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("Modified_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Modified_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<bool>("TrangThai")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UserId")
+                    b.Property<int>("IdSanPham")
                         .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("ChiTietDatHang");
-                });
-
-            modelBuilder.Entity("WebApiEcommerceApp.Data.ChiTietThanhToan", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime?>("Created_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Created_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Delete_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Delete_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdChiTietDH")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Modified_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Modified_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NhaCungCap")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
-                    b.Property<string>("TrangThai")
+                    b.HasKey("Id");
+
+                    b.ToTable("ChiTietDonHang");
+                });
+
+            modelBuilder.Entity("EcommerceApiWeb.Data.Entity.ChiTietGioHang", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("IdGioHang")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdSanPham")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenSanPham")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdChiTietDH");
+                    b.ToTable("ChiTietGioHang");
+                });
 
-                    b.ToTable("ChiTietThanhToan");
+            modelBuilder.Entity("EcommerceApiWeb.Data.Entity.DonHang", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("Created_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Created_by")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Delete_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Delete_by")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DiaDiemNhanHang")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("GiaDonHang")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("GiaTamTinh")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long?>("IdKhoHang")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("IdUser")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("Modified_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Modified_by")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("NgayMua")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TrangThai")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TypeNhanHang")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TypeThanhToan")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DonHang");
                 });
 
             modelBuilder.Entity("WebApiEcommerceApp.Data.DanhMucSanPham", b =>
@@ -152,50 +167,6 @@ namespace EcommerceApiWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("DanhMucSanPham");
-                });
-
-            modelBuilder.Entity("WebApiEcommerceApp.Data.DatHang", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime?>("Created_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Created_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Delete_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Delete_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdChiTietDH")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdSanPham")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Modified_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Modified_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TrangThai")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdChiTietDH");
-
-                    b.HasIndex("IdSanPham");
-
-                    b.ToTable("DatHang");
                 });
 
             modelBuilder.Entity("WebApiEcommerceApp.Data.DiaChiUser", b =>
@@ -271,6 +242,50 @@ namespace EcommerceApiWeb.Migrations
                     b.ToTable("GiamGia");
                 });
 
+            modelBuilder.Entity("WebApiEcommerceApp.Data.GioHang", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("Created_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Created_by")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Delete_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Delete_by")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdChiTietGioHang")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPhienMuaSam")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Modified_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Modified_by")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TrangThai")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdChiTietGioHang");
+
+                    b.HasIndex("IdPhienMuaSam");
+
+                    b.ToTable("GioHang");
+                });
+
             modelBuilder.Entity("WebApiEcommerceApp.Data.KhoHang", b =>
                 {
                     b.Property<int>("Id")
@@ -291,14 +306,17 @@ namespace EcommerceApiWeb.Migrations
                     b.Property<string>("Delete_by")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DiaChi")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("Modified_at")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Modified_by")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SoLuong")
-                        .HasColumnType("int");
+                    b.Property<string>("TenCoSo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
@@ -368,8 +386,8 @@ namespace EcommerceApiWeb.Migrations
                     b.Property<string>("Delete_by")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("GiaSanPham")
-                        .HasColumnType("float");
+                    b.Property<decimal>("GiaSanPham")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("IdDanhMuc")
                         .HasColumnType("int");
@@ -417,28 +435,10 @@ namespace EcommerceApiWeb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime?>("Created_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Created_by")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Delete_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Delete_by")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("DienThoai")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HoVaTen")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Modified_at")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Modified_by")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
@@ -452,66 +452,6 @@ namespace EcommerceApiWeb.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("WebApiEcommerceApp.Data.UserThanhToan", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("HetHan")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("PhuongThucThanhToan")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("UserThanhToan");
-                });
-
-            modelBuilder.Entity("WebApiEcommerceApp.Data.ChiTietDatHang", b =>
-                {
-                    b.HasOne("WebApiEcommerceApp.Data.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("WebApiEcommerceApp.Data.ChiTietThanhToan", b =>
-                {
-                    b.HasOne("WebApiEcommerceApp.Data.ChiTietDatHang", "ChiTietDatHang")
-                        .WithMany()
-                        .HasForeignKey("IdChiTietDH")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ChiTietDatHang");
-                });
-
-            modelBuilder.Entity("WebApiEcommerceApp.Data.DatHang", b =>
-                {
-                    b.HasOne("WebApiEcommerceApp.Data.ChiTietDatHang", "ChiTietDatHang")
-                        .WithMany()
-                        .HasForeignKey("IdChiTietDH")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WebApiEcommerceApp.Data.SanPham", "SanPham")
-                        .WithMany()
-                        .HasForeignKey("IdSanPham")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ChiTietDatHang");
-
-                    b.Navigation("SanPham");
-                });
-
             modelBuilder.Entity("WebApiEcommerceApp.Data.DiaChiUser", b =>
                 {
                     b.HasOne("WebApiEcommerceApp.Data.User", "User")
@@ -521,6 +461,25 @@ namespace EcommerceApiWeb.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("WebApiEcommerceApp.Data.GioHang", b =>
+                {
+                    b.HasOne("EcommerceApiWeb.Data.Entity.ChiTietGioHang", "ChiTietGioHang")
+                        .WithMany()
+                        .HasForeignKey("IdChiTietGioHang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebApiEcommerceApp.Data.PhienMuaSam", "PhienMuaSam")
+                        .WithMany()
+                        .HasForeignKey("IdPhienMuaSam")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ChiTietGioHang");
+
+                    b.Navigation("PhienMuaSam");
                 });
 #pragma warning restore 612, 618
         }
